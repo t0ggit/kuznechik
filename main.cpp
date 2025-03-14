@@ -17,16 +17,12 @@ int main(int argc, char* argv[])
     // Получаем имя входного файла из аргументов
     std::string inputFile = argv[1];
     
-    // Формируем имена выходных файлов на основе входного
     std::string encryptedFile = "output/encrypted_" + inputFile;
-    std::string decryptedFile = "output/decrypted_" + inputFile;
 
-    // Шифрование и дешифрование
+    // Шифрование
     encrypt_file(inputFile.c_str(), encryptedFile.c_str(), key_1, key_2);
-    decrypt_file(encryptedFile.c_str(), decryptedFile.c_str(), key_1, key_2);
 
     std::cout << "Encryption completed: " << encryptedFile << std::endl;
-    std::cout << "Decryption completed: " << decryptedFile << std::endl;
 
     return 0;
 }
